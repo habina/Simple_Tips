@@ -47,7 +47,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" id="Pty-yW-Epy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="Pty-yW-Epy">
                                 <frame key="frameInset" minX="200" minY="143" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -198,6 +198,13 @@
                                     <action selector="onTapClear:" destination="gs7-Ls-hGF" eventType="touchUpInside" id="oBm-dt-gKD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dmq-Rf-eUi">
+                                <frame key="frameInset" minX="93" minY="77" width="188" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -207,6 +214,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XGD-IG-Dx1"/>
                     <connections>
+                        <outlet property="settingTitleLabel" destination="Dmq-Rf-eUi" id="x4w-FU-yEt"/>
                         <outlet property="tipText1" destination="jtU-LL-pN4" id="hfi-JQ-hhS"/>
                         <outlet property="tipText2" destination="8ig-T4-2xF" id="VgH-K4-Adp"/>
                         <outlet property="tipText3" destination="LWe-AD-r59" id="KMn-AP-uo2"/>

@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         print("view did appear")
         self.titleLabel.alpha = 1
-        UIView.animate(withDuration: 0.4, animations: {
+        UIView.animate(withDuration: 1.5, animations: {
             self.titleLabel.alpha = 0
             })
     }

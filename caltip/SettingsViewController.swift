@@ -13,6 +13,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tipText1: UITextField!
     @IBOutlet weak var tipText2: UITextField!
     @IBOutlet weak var tipText3: UITextField!
+    @IBOutlet weak var settingTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,15 @@ class SettingsViewController: UIViewController {
         tipText1.text = String(rate1)
         tipText2.text = String(rate2)
         tipText3.text = String(rate3)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("setting view did appear")
+        self.settingTitleLabel.alpha = 1
+        UIView.animate(withDuration: 1.5, animations: {
+            self.settingTitleLabel.alpha = 0.1
+        })
     }
 
     override func didReceiveMemoryWarning() {
