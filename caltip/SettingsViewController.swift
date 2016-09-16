@@ -26,17 +26,29 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func tip1OnEnd(_ sender: AnyObject) {
-        let rate1 = Double(tipText1.text!) ?? 0
+        let defaults = UserDefaults.standard
+        let oldRate = defaults.double(forKey: "rate1")
+        let rate1 = Double(tipText1.text!) ?? oldRate
+        defaults.set(rate1, forKey: "rate1")
+        defaults.set(true, forKey: "isUpdate")
         print("rate1: ", rate1)
     }
 
     @IBAction func tip2OnEnd(_ sender: AnyObject) {
-        let rate2 = Double(tipText2.text!) ?? 0
+        let defaults = UserDefaults.standard
+        let oldRate = defaults.double(forKey: "rate2")
+        let rate2 = Double(tipText2.text!) ?? oldRate
+        defaults.set(rate2, forKey: "rate2")
+        defaults.set(true, forKey: "isUpdate")
         print("rate2: ", rate2)
     }
     
     @IBAction func tip3OnEnd(_ sender: AnyObject) {
-        let rate3 = Double(tipText3.text!) ?? 0
+        let defaults = UserDefaults.standard
+        let oldRate = defaults.double(forKey: "rate3")
+        let rate3 = Double(tipText3.text!) ?? oldRate
+        defaults.set(rate3, forKey: "rate3")
+        defaults.set(true, forKey: "isUpdate")
         print("rate3: ", rate3)
     }
     
