@@ -19,6 +19,20 @@ class SettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("setting view will appear")
+        // load initial value
+        let defaults = UserDefaults.standard
+        let rate1 = defaults.double(forKey: "rate1")
+        let rate2 = defaults.double(forKey: "rate2")
+        let rate3 = defaults.double(forKey: "rate3")
+
+        tipText1.text = String(rate1)
+        tipText2.text = String(rate2)
+        tipText3.text = String(rate3)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,27 +42,39 @@ class SettingsViewController: UIViewController {
     @IBAction func tip1OnEnd(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         let oldRate = defaults.double(forKey: "rate1")
-        let rate1 = Double(tipText1.text!) ?? oldRate
+        var rate1 = Double(tipText1.text!) ?? oldRate
+        if (rate1 > 1) {
+            rate1 = rate1 / 100
+        }
         defaults.set(rate1, forKey: "rate1")
         defaults.set(true, forKey: "isUpdate")
+        tipText1.text = String(rate1)
         print("rate1: ", rate1)
     }
 
     @IBAction func tip2OnEnd(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         let oldRate = defaults.double(forKey: "rate2")
-        let rate2 = Double(tipText2.text!) ?? oldRate
+        var rate2 = Double(tipText2.text!) ?? oldRate
+        if (rate2 > 1) {
+            rate2 = rate2 / 100
+        }
         defaults.set(rate2, forKey: "rate2")
         defaults.set(true, forKey: "isUpdate")
+        tipText2.text = String(rate2)
         print("rate2: ", rate2)
     }
     
     @IBAction func tip3OnEnd(_ sender: AnyObject) {
         let defaults = UserDefaults.standard
         let oldRate = defaults.double(forKey: "rate3")
-        let rate3 = Double(tipText3.text!) ?? oldRate
+        var rate3 = Double(tipText3.text!) ?? oldRate
+        if (rate3 > 1) {
+            rate3 = rate3 / 100
+        }
         defaults.set(rate3, forKey: "rate3")
         defaults.set(true, forKey: "isUpdate")
+        tipText3.text = String(rate3)
         print("rate3: ", rate3)
     }
     
@@ -62,6 +88,9 @@ class SettingsViewController: UIViewController {
     
     @IBAction func onTapClear(_ sender: AnyObject) {
         print("tap clear")
+        tipText1.text = ""
+        tipText2.text = ""
+        tipText3.text = ""
     }
 
     /*
