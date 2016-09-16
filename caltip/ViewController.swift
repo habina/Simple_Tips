@@ -15,15 +15,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var tipPercentages = [Double]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let defaults = UserDefaults.standard
+        let isFirstLaunch = defaults.bool(forKey: "fisrtLaunch")
+        if !isFirstLaunch {
+            print("first laucnh")
+            defaults.set(true, forKey: "firstLaunch")
+            defaults.set(false, forKey: "isUpdate")
+
+            let initTipRate = [0.18, 0.20, 0.25]
+            defaults.set(initTipRate[0], forKey: "rate1")
+            defaults.set(initTipRate[1], forKey: "rate2")
+            defaults.set(initTipRate[2], forKey: "rate3")
+
+            tipPercentages.append(initTipRate[0])
+            tipPercentages.append(initTipRate[1])
+            tipPercentages.append(initTipRate[2])
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("view will appear")
+        let defaults = UserDefaults.standard
+        if defaults.bool(forKey: "isUpdate") {
+            // TODO: update UI view
+            defaults.set(false, forKey: "isUpdate")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,10 +80,8 @@ class ViewController: UIViewController {
 
     @IBAction func calculateTip(_ sender: AnyObject) {
         
-        let tipPercentages = [0.18, 0.2, 0.25]
-        
         let bill = Double(billField.text!) ?? 0
-        let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
+        let tip = bill * self.tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
 
         tipLabel.text = String(format: "$%.2f", tip)
