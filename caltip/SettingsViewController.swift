@@ -25,9 +25,31 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func tipOnEnd(_ sender: AnyObject) {
+    @IBAction func tip1OnEnd(_ sender: AnyObject) {
         let rate1 = Double(tipText1.text!) ?? 0
-        print(rate1)
+        print("rate1: ", rate1)
+    }
+
+    @IBAction func tip2OnEnd(_ sender: AnyObject) {
+        let rate2 = Double(tipText2.text!) ?? 0
+        print("rate2: ", rate2)
+    }
+    
+    @IBAction func tip3OnEnd(_ sender: AnyObject) {
+        let rate3 = Double(tipText3.text!) ?? 0
+        print("rate3: ", rate3)
+    }
+    
+    @IBAction func onTap(_ sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func onTapSave(_ sender: AnyObject) {
+        print("tap save")
+    }
+    
+    @IBAction func onTapClear(_ sender: AnyObject) {
+        print("tap clear")
     }
 
     /*

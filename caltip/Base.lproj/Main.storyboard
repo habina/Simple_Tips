@@ -136,7 +136,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="tipOnEnd:" destination="gs7-Ls-hGF" eventType="editingDidEnd" id="A8f-ci-QFY"/>
+                                    <action selector="tip1OnEnd:" destination="gs7-Ls-hGF" eventType="editingDidEnd" id="zj7-mb-KGK"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="8ig-T4-2xF">
@@ -145,6 +145,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="tip2OnEnd:" destination="gs7-Ls-hGF" eventType="editingDidEnd" id="oEF-DV-WIo"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="LWe-AD-r59">
                                 <frame key="frameInset" minX="211" minY="284" width="97" height="30"/>
@@ -152,6 +155,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="tip3OnEnd:" destination="gs7-Ls-hGF" eventType="editingDidEnd" id="H7a-N9-Q3x"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1st Tip Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j2Z-Su-eMZ">
                                 <frame key="frameInset" minX="38" minY="149" width="90" height="21"/>
@@ -179,9 +185,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTapSave:" destination="gs7-Ls-hGF" eventType="touchUpInside" id="qcK-xf-IjX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qFh-qL-dLW">
+                                <frame key="frameInset" minX="56" minY="356" width="90" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="onTapClear:" destination="gs7-Ls-hGF" eventType="touchUpInside" id="oBm-dt-gKD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4mC-qb-uuK" appends="YES" id="r9k-ns-t3l"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="XGD-IG-Dx1"/>
                     <connections>
@@ -191,6 +213,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrv-bw-FeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4mC-qb-uuK">
+                    <connections>
+                        <action selector="onTap:" destination="gs7-Ls-hGF" id="WtK-w4-5Wz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="974.5" y="155.5"/>
         </scene>
