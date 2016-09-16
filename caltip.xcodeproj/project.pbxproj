@@ -14,6 +14,7 @@
 		7170A92D1D8B5EC200F5EA65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7170A92B1D8B5EC200F5EA65 /* LaunchScreen.storyboard */; };
 		7170A9381D8B5EC300F5EA65 /* caltipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170A9371D8B5EC300F5EA65 /* caltipTests.swift */; };
 		7170A9431D8B5EC300F5EA65 /* caltipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170A9421D8B5EC300F5EA65 /* caltipUITests.swift */; };
+		7170A9511D8C8ED800F5EA65 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170A9501D8C8ED800F5EA65 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7170A93E1D8B5EC300F5EA65 /* caltipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = caltipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7170A9421D8B5EC300F5EA65 /* caltipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caltipUITests.swift; sourceTree = "<group>"; };
 		7170A9441D8B5EC300F5EA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7170A9501D8C8ED800F5EA65 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				7170A9221D8B5EC200F5EA65 /* AppDelegate.swift */,
 				7170A9241D8B5EC200F5EA65 /* ViewController.swift */,
 				7170A9261D8B5EC200F5EA65 /* Main.storyboard */,
+				7170A9501D8C8ED800F5EA65 /* SettingsViewController.swift */,
 				7170A9291D8B5EC200F5EA65 /* Assets.xcassets */,
 				7170A92B1D8B5EC200F5EA65 /* LaunchScreen.storyboard */,
 				7170A92E1D8B5EC200F5EA65 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				7170A9251D8B5EC200F5EA65 /* ViewController.swift in Sources */,
 				7170A9231D8B5EC200F5EA65 /* AppDelegate.swift in Sources */,
+				7170A9511D8C8ED800F5EA65 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

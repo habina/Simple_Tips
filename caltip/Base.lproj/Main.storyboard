@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="cES-OA-mbv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -83,6 +83,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u4X-lT-27M">
+                                <frame key="frameInset" minX="85" minY="76" width="188" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -90,10 +97,18 @@
                             <outletCollection property="gestureRecognizers" destination="g7B-9M-QVC" appends="YES" id="Zi9-6x-faV"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="qbJ-Ts-Whq">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="btW-zl-5T0">
+                            <connections>
+                                <segue destination="gs7-Ls-hGF" kind="push" id="c3d-eJ-pom"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="Pty-yW-Epy" id="Fzb-Jk-YAP"/>
                         <outlet property="tipControl" destination="sr0-zT-Dgn" id="HDe-KX-KPQ"/>
                         <outlet property="tipLabel" destination="Zlk-xy-FEs" id="vR4-wg-STl"/>
+                        <outlet property="titleLabel" destination="u4X-lT-27M" id="nX6-HH-dQE"/>
                         <outlet property="totalLabel" destination="Y8R-0t-Rnn" id="Unj-si-Bbl"/>
                     </connections>
                 </viewController>
@@ -103,6 +118,39 @@
                         <action selector="onTap:" destination="BYZ-38-t0r" id="g2B-rt-tHc"/>
                     </connections>
                 </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="532.5" y="155.5"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Gan-0R-XPE">
+            <objects>
+                <viewController id="gs7-Ls-hGF" customClass="SettingsViewController" customModule="caltip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dje-uU-Oc1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XGD-IG-Dx1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrv-bw-FeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z6U-EJ-xCQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cES-OA-mbv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c5J-D2-Jkh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cjb-Zy-jG3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efd-eh-2Fk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-54.5" y="155.5"/>
         </scene>
