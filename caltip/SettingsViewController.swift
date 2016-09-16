@@ -10,6 +10,10 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var tipText1: UITextField!
+    @IBOutlet weak var tipText2: UITextField!
+    @IBOutlet weak var tipText3: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +25,10 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func tipOnEnd(_ sender: AnyObject) {
+        let rate1 = Double(tipText1.text!) ?? 0
+        print(rate1)
+    }
 
     /*
     // MARK: - Navigation
