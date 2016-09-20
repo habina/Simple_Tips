@@ -21,6 +21,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.view.backgroundColor = Style.sectionHeaderBackgroundColor
+        self.view.alpha = Style.sectionHeaderAlpha
+        
+        tipLabel.textColor = Style.sectionHeaderTitleColor
+        tipLabel.font = Style.sectionHeaderTitleFont
+
+        totalLabel.textColor = Style.sectionHeaderTitleColor
+        totalLabel.font = Style.sectionHeaderTitleFont
+
+        titleLabel.textColor = Style.sectionHeaderTitleColor
+        titleLabel.font = Style.sectionHeaderTitleFont
+        
+        
         let defaults = UserDefaults.standard
         let isFirstLaunch = defaults.bool(forKey: "fisrtLaunch")
         if !isFirstLaunch {

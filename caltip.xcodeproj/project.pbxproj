@@ -15,6 +15,7 @@
 		7170A9381D8B5EC300F5EA65 /* caltipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170A9371D8B5EC300F5EA65 /* caltipTests.swift */; };
 		7170A9431D8B5EC300F5EA65 /* caltipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170A9421D8B5EC300F5EA65 /* caltipUITests.swift */; };
 		7170A9511D8C8ED800F5EA65 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170A9501D8C8ED800F5EA65 /* SettingsViewController.swift */; };
+		71840D0C1D90A0CA004BF76D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71840D0B1D90A0CA004BF76D /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7170A9421D8B5EC300F5EA65 /* caltipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = caltipUITests.swift; sourceTree = "<group>"; };
 		7170A9441D8B5EC300F5EA65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7170A9501D8C8ED800F5EA65 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		71840D0B1D90A0CA004BF76D /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Style.swift; path = ../Style.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		7170A9211D8B5EC200F5EA65 /* caltip */ = {
 			isa = PBXGroup;
 			children = (
+				71840D0B1D90A0CA004BF76D /* Style.swift */,
 				7170A9221D8B5EC200F5EA65 /* AppDelegate.swift */,
 				7170A9241D8B5EC200F5EA65 /* ViewController.swift */,
 				7170A9261D8B5EC200F5EA65 /* Main.storyboard */,
@@ -265,6 +268,7 @@
 				7170A9251D8B5EC200F5EA65 /* ViewController.swift in Sources */,
 				7170A9231D8B5EC200F5EA65 /* AppDelegate.swift in Sources */,
 				7170A9511D8C8ED800F5EA65 /* SettingsViewController.swift in Sources */,
+				71840D0C1D90A0CA004BF76D /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +513,7 @@
 				7170A9491D8B5EC300F5EA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7170A94A1D8B5EC300F5EA65 /* Build configuration list for PBXNativeTarget "caltipTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +522,7 @@
 				7170A94C1D8B5EC300F5EA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7170A94D1D8B5EC300F5EA65 /* Build configuration list for PBXNativeTarget "caltipUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +531,7 @@
 				7170A94F1D8B5EC300F5EA65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
