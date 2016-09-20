@@ -14,11 +14,17 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tipText2: UITextField!
     @IBOutlet weak var tipText3: UITextField!
     @IBOutlet weak var settingTitleLabel: UILabel!
+    @IBOutlet weak var tip1TextLabel: UILabel!
+    @IBOutlet weak var tip2TextLabel: UILabel!
+    @IBOutlet weak var tip3TextLabel: UILabel!
+    @IBOutlet weak var themeTextLabel: UILabel!
+    @IBOutlet weak var themeToggle: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +32,34 @@ class SettingsViewController: UIViewController {
         print("setting view will appear")
         // load initial value
         let defaults = UserDefaults.standard
+        
+        let isDarkTheme = defaults.bool(forKey: "theme")
+        if !isDarkTheme {
+            Style.themeLight()
+        } else {
+            Style.themeDark()
+        }
+        
+        self.view.backgroundColor = Style.sectionHeaderBackgroundColor
+        self.view.alpha = Style.sectionHeaderAlpha
+        
+        settingTitleLabel.textColor = Style.sectionHeaderTitleColor
+        settingTitleLabel.font = Style.sectionHeaderTitleFont
+        
+        tip1TextLabel.textColor = Style.sectionHeaderTitleColor
+        tip1TextLabel.font = Style.sectionHeaderTitleFont
+        
+        tip2TextLabel.textColor = Style.sectionHeaderTitleColor
+        tip2TextLabel.font = Style.sectionHeaderTitleFont
+        
+        tip3TextLabel.textColor = Style.sectionHeaderTitleColor
+        tip3TextLabel.font = Style.sectionHeaderTitleFont
+        
+        themeTextLabel.textColor = Style.sectionHeaderTitleColor
+        themeTextLabel.font = Style.sectionHeaderTitleFont
+        
+        themeToggle.setOn(defaults.bool(forKey: "theme"), animated: true)
+        
         let rate1 = defaults.double(forKey: "rate1")
         let rate2 = defaults.double(forKey: "rate2")
         let rate3 = defaults.double(forKey: "rate3")
@@ -102,6 +136,13 @@ class SettingsViewController: UIViewController {
         tipText2.text = ""
         tipText3.text = ""
     }
+
+    @IBAction func onChangeThemeToggle(_ sender: AnyObject) {
+        let defaults = UserDefaults.standard
+        defaults.set(!defaults.bool(forKey: "theme"), forKey: "theme")
+        self.viewWillAppear(true)
+    }
+    
 
     /*
     // MARK: - Navigation

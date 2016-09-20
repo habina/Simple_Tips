@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var separationBar: UIView!
+    
+    
+    @IBOutlet weak var billTextLabel: UILabel!
+    @IBOutlet weak var totalTextLabel: UILabel!
+    @IBOutlet weak var tipTextLabel: UILabel!
     
     var tipPercentages = [Double]()
 
@@ -22,20 +28,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.view.backgroundColor = Style.sectionHeaderBackgroundColor
-        self.view.alpha = Style.sectionHeaderAlpha
-        
-        tipLabel.textColor = Style.sectionHeaderTitleColor
-        tipLabel.font = Style.sectionHeaderTitleFont
-
-        totalLabel.textColor = Style.sectionHeaderTitleColor
-        totalLabel.font = Style.sectionHeaderTitleFont
-
-        titleLabel.textColor = Style.sectionHeaderTitleColor
-        titleLabel.font = Style.sectionHeaderTitleFont
-        
-        
         let defaults = UserDefaults.standard
+        
         let isFirstLaunch = defaults.bool(forKey: "fisrtLaunch")
         if !isFirstLaunch {
             print("first laucnh")
@@ -58,6 +52,37 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         print("view will appear")
         let defaults = UserDefaults.standard
+        
+        let isDarkTheme = defaults.bool(forKey: "theme")
+        if !isDarkTheme {
+            Style.themeLight()
+        } else {
+            Style.themeDark()
+        }
+        
+        self.view.backgroundColor = Style.sectionHeaderBackgroundColor
+        self.view.alpha = Style.sectionHeaderAlpha
+        
+        tipLabel.textColor = Style.sectionHeaderTitleColor
+        tipLabel.font = Style.sectionHeaderTitleFont
+        
+        totalLabel.textColor = Style.sectionHeaderTitleColor
+        totalLabel.font = Style.sectionHeaderTitleFont
+        
+        titleLabel.textColor = Style.sectionHeaderTitleColor
+        titleLabel.font = Style.sectionHeaderTitleFont
+        
+        billTextLabel.textColor = Style.sectionHeaderTitleColor
+        billTextLabel.font = Style.sectionHeaderTitleFont
+        
+        tipTextLabel.textColor = Style.sectionHeaderTitleColor
+        tipTextLabel.font = Style.sectionHeaderTitleFont
+        
+        totalTextLabel.textColor = Style.sectionHeaderTitleColor
+        totalTextLabel.font = Style.sectionHeaderTitleFont
+        
+        separationBar.backgroundColor = Style.sectionHeaderTitleColor
+        
         if defaults.bool(forKey: "isUpdate") {
             
             print("updating tip percentages")

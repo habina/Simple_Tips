@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NY7-Nc-6AJ">
-                                <frame key="frameInset" minX="67" minY="152" width="23" height="21"/>
+                                <frame key="frameInset" minX="67" minY="152" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -27,14 +27,14 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OE7-uz-jUu">
-                                <frame key="frameInset" minX="67" minY="322" width="38" height="21"/>
+                                <frame key="frameInset" minX="67" minY="322" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EDM-5D-ETc">
-                                <frame key="frameInset" minX="67" minY="212" width="25" height="21"/>
+                                <frame key="frameInset" minX="67" minY="212" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -106,10 +106,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="Pty-yW-Epy" id="Fzb-Jk-YAP"/>
+                        <outlet property="billTextLabel" destination="NY7-Nc-6AJ" id="s97-iy-PFu"/>
+                        <outlet property="separationBar" destination="m5v-Wd-CNh" id="wqk-AS-ryT"/>
                         <outlet property="tipControl" destination="sr0-zT-Dgn" id="HDe-KX-KPQ"/>
                         <outlet property="tipLabel" destination="Zlk-xy-FEs" id="vR4-wg-STl"/>
+                        <outlet property="tipTextLabel" destination="EDM-5D-ETc" id="15j-WV-hH7"/>
                         <outlet property="titleLabel" destination="u4X-lT-27M" id="nX6-HH-dQE"/>
                         <outlet property="totalLabel" destination="Y8R-0t-Rnn" id="Unj-si-Bbl"/>
+                        <outlet property="totalTextLabel" destination="OE7-uz-jUu" id="oO5-k2-nMx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -160,28 +164,28 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1st Tip Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j2Z-Su-eMZ">
-                                <frame key="frameInset" minX="38" minY="149" width="90" height="21"/>
+                                <frame key="frameInset" minX="38" minY="149" width="142" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3rd Tip Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sBC-P1-9DU">
-                                <frame key="frameInset" minX="40" minY="293" width="94" height="21"/>
+                                <frame key="frameInset" minX="40" minY="293" width="140" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2nd Tip Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VZo-el-Epv">
-                                <frame key="frameInset" minX="38" minY="216" width="98" height="21"/>
+                                <frame key="frameInset" minX="38" minY="216" width="142" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aYf-LX-NE8">
-                                <frame key="frameInset" minX="218" minY="356" width="90" height="54"/>
+                                <frame key="frameInset" minX="214" minY="428" width="90" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Save"/>
@@ -190,7 +194,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qFh-qL-dLW">
-                                <frame key="frameInset" minX="56" minY="356" width="90" height="54"/>
+                                <frame key="frameInset" minX="51" minY="428" width="90" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Clear"/>
@@ -205,6 +209,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Light/Dark Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ls8-Y3-egS">
+                                <frame key="frameInset" minX="38" minY="353" width="161" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="gLO-Hi-Wjo">
+                                <frame key="frameInset" minX="235" minY="353" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onChangeThemeToggle:" destination="gs7-Ls-hGF" eventType="valueChanged" id="t5v-Zl-pLU"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -215,6 +233,11 @@
                     <navigationItem key="navigationItem" id="XGD-IG-Dx1"/>
                     <connections>
                         <outlet property="settingTitleLabel" destination="Dmq-Rf-eUi" id="x4w-FU-yEt"/>
+                        <outlet property="themeTextLabel" destination="ls8-Y3-egS" id="OK4-xR-YmK"/>
+                        <outlet property="themeToggle" destination="gLO-Hi-Wjo" id="e1A-1B-vwt"/>
+                        <outlet property="tip1TextLabel" destination="j2Z-Su-eMZ" id="A7g-xA-eQy"/>
+                        <outlet property="tip2TextLabel" destination="VZo-el-Epv" id="0nn-Mx-sUa"/>
+                        <outlet property="tip3TextLabel" destination="sBC-P1-9DU" id="VxK-h4-cLo"/>
                         <outlet property="tipText1" destination="jtU-LL-pN4" id="hfi-JQ-hhS"/>
                         <outlet property="tipText2" destination="8ig-T4-2xF" id="VgH-K4-Adp"/>
                         <outlet property="tipText3" destination="LWe-AD-r59" id="KMn-AP-uo2"/>
