@@ -8,3 +8,6 @@ Device: iPhone
 ### GIF Walkthrough
 
 ![alt tag](/../master/simple_tips.gif?raw=true)
+
+#### New Feature, Dark and Light theme
+![alt tag](/../master/simple_tips.gif?raw=true)
