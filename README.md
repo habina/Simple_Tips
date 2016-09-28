@@ -48,6 +48,7 @@ Describe any challenges encountered while building the app.
 - A lot APIs are deprecated.
 - A lot StackOverflow links are no longer applicable.
 - Good thing is XCode is so smart, helping on prompting deprecated APIs.
+- New comment, not only stackoverflow links, a lot other links or blogs that relate to Swift language are no longer applicable due the updating frequency of Swift community.
 
 ## License
 
