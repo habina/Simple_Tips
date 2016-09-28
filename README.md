@@ -15,21 +15,27 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 * [✓] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
+* [✓] Remembering the bill amount across app restarts (if <10mins)
 * [✓] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn not have to tap anywhere to use this app. Just launch the app and start typing.
+* [✓] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn not have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [✔] Dark and Light theme
+- [✓] Dark and Light theme
 
 ## Video Walkthrough 
 
 Here is a walkthrough of implemented user stories:
 
-![alt tag](/../master/simple_tips.gif?raw=true)
+#### 3rd Version Gif 
 
-#### New Feature, Dark and Light theme
+![alt tag](/../master/simple_tips3.gif?raw=true)
+
+#### 2nd Version Gif, New Feature, Dark and Light theme
+![alt tag](/../master/simple_tips2.gif?raw=true)
+
+#### 1st Version Gif 
+
 ![alt tag](/../master/simple_tips.gif?raw=true)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
