@@ -4,7 +4,7 @@
 
 Submitted by: **Dasheng Chen**
 
-Time spent: **11** hours spent in total
+Time spent: **13** hours spent in total
 
 ## User Stories
 
