@@ -1,4 +1,4 @@
-# Pre-work - *Name of App Here*
+# Pre-work - *Simple Tips*
 
 **Simple Tips** is a tip calculator application for iOS.
 
@@ -10,23 +10,22 @@ Time spent: **11** hours spent in total
 
 The following **required** functionality is complete:
 
-* [✔] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
-* [✔] Settings page to change the default tip percentage.
+* [✓] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [✓] Settings page to change the default tip percentage.
 
 The following **optional** features are implemented:
-* [✔] UI animations
+* [✓] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
-* [✔] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [✓] Using locale-specific currency and currency thousands separators.
+* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn not have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
 - [✔] Dark and Light theme
 
 ## Video Walkthrough 
 
-Here's a walkthrough of implemented user stories:
+Here is a walkthrough of implemented user stories:
 
 ![alt tag](/../master/simple_tips.gif?raw=true)
 
