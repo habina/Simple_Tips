@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         let isFirstLaunch = defaults.bool(forKey: "fisrtLaunch")
         if !isFirstLaunch {
-            print("first laucnh")
+            print("DEBUG: first laucnh")
             defaults.set(true, forKey: "firstLaunch")
             defaults.set(false, forKey: "isUpdate")
 
@@ -53,8 +53,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("view will appear")
+        print("DEBUG: view will appear")
         let defaults = UserDefaults.standard
+        
+        let disappearDate = defaults.string(forKey: "disappearDate")
+        if (disappearDate != nil) {
+            print("DEBUG: Disappear at ", disappearDate)
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = NSLocale.current
+            dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+            let oldDate = dateFormatter.date(from: disappearDate!)
+            let curDate = Date()
+            let interval = curDate.timeIntervalSince(oldDate!)
+            print("DEBUG: Interval time ", interval.rounded())
+            if (interval.rounded() > 600) {
+                print("DEBUG: Clean State")
+                self.billField.text = ""
+            }
+        }
         
         let isDarkTheme = defaults.bool(forKey: "theme")
         if !isDarkTheme {
@@ -88,7 +104,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         if defaults.bool(forKey: "isUpdate") {
             
-            print("updating tip percentages")
+            print("DEBUG: updating tip percentages")
 
             let rate1 = defaults.double(forKey: "rate1")
             let rate2 = defaults.double(forKey: "rate2")
@@ -107,7 +123,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("view did appear")
+        print("DEBUG: view did appear")
         self.titleLabel.alpha = 1
         UIView.animate(withDuration: 1.5, animations: {
             self.titleLabel.alpha = 0
@@ -116,12 +132,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("view will disappear")
+        print("DEBUG: view will disappear")
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+        let stringCurDate = dateFormatter.string(from: Date())
+        print("DEBUG: Disappear date", stringCurDate)
+        UserDefaults.standard.set(stringCurDate, forKey: "disappearDate")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        print("view did disappear")
+        print("DEBUG: view did disappear")
     }
 
     override func didReceiveMemoryWarning() {

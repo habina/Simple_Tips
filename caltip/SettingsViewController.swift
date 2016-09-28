@@ -29,7 +29,7 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("setting view will appear")
+        print("DEBUG: setting view will appear")
         // load initial value
         let defaults = UserDefaults.standard
         
@@ -71,7 +71,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("setting view did appear")
+        print("DEBUG: setting view did appear")
         self.settingTitleLabel.alpha = 1
         UIView.animate(withDuration: 1.5, animations: {
             self.settingTitleLabel.alpha = 0.1
@@ -93,7 +93,7 @@ class SettingsViewController: UIViewController {
         defaults.set(rate1, forKey: "rate1")
         defaults.set(true, forKey: "isUpdate")
         tipText1.text = String(rate1)
-        print("rate1: ", rate1)
+        print("DEBUG: rate1: ", rate1)
     }
 
     @IBAction func tip2OnEnd(_ sender: AnyObject) {
@@ -106,7 +106,7 @@ class SettingsViewController: UIViewController {
         defaults.set(rate2, forKey: "rate2")
         defaults.set(true, forKey: "isUpdate")
         tipText2.text = String(rate2)
-        print("rate2: ", rate2)
+        print("DEBUG: rate2: ", rate2)
     }
     
     @IBAction func tip3OnEnd(_ sender: AnyObject) {
@@ -119,7 +119,7 @@ class SettingsViewController: UIViewController {
         defaults.set(rate3, forKey: "rate3")
         defaults.set(true, forKey: "isUpdate")
         tipText3.text = String(rate3)
-        print("rate3: ", rate3)
+        print("DEBUG: rate3: ", rate3)
     }
     
     @IBAction func onTap(_ sender: AnyObject) {
@@ -127,11 +127,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func onTapSave(_ sender: AnyObject) {
-        print("tap save")
+        print("DEBUG: tap save")
     }
     
     @IBAction func onTapClear(_ sender: AnyObject) {
-        print("tap clear")
+        print("DEBUG: tap clear")
         tipText1.text = ""
         tipText2.text = ""
         tipText3.text = ""
